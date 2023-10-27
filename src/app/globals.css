@@ -25,3 +25,8 @@
     )
     rgb(var(--background-start-rgb));
 } */
+
+.gradient-text{
+  background: linear-gradient(118.26deg, #FDC48F 12.19%, #6540DD 73.31%);
+
+}
