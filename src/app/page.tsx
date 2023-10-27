@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex flex-col items-center justify-between">
     {/*   <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -108,7 +109,81 @@ export default function Home() {
           </p>
         </a>
       </div> */}
-      Home Page
+
+      {/** ****************************************LANDING | HERO SECTION ********************************************* */}
+      <div className='text-center'>
+        <p className='text-5xl font-extrabold bg-gradient-to-r from-[#FDC48F] to-[#6540DD] text-transparent bg-clip-text'>Professional Cleaning<br/><span>Service at your Convenience.</span></p><br/>
+        <span className='text-lg'>Experience Seamless Laundry Excellence Tailored to Your Schedule. We Pick and <br/>deliver every Saturdays and Sundays.</span>
+      </div>
+
+      <div className='my-5 flex flex-col items-center'>
+        <span className='bg-[#6540DD] text-[#FFF] p-3 rounded-md mb-5'><Link href="/auth/signup">Get Started</Link></span>
+        <Image src="/assets/hero-img.png" alt="" width={842} height={751}/>
+      </div>
+
+      {/* *********************************************SERVICES SECTION************************************************* */}
+
+      <div className='flex flex-col'>
+        <p className='text-5xl text-center font-extrabold text-[#6540DD]'>Our Services</p>
+        <span className='text-xl text-center font-extralight'>Why choose us</span>
+      </div>
+
+      <div className='grid grid-cols-3 gap-10 px-24 my-10'>
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <Image src="/assets/dispatch-image.png" alt="" width={80} height={80}/>
+          <p className='text-sm font-extralight'>Convenient Weekly Home Pickup and Delivery Services</p>
+        </div>
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <Image src="/assets/laundry-image.png" alt="" width={80} height={80}/>
+          <p className='text-sm font-extralight'>Garments enhancement with Expert Washing, Fabric Starching and Precision Ironing</p>
+        </div>
+        <div className='cols-span-3 md: col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <Image src="/assets/support-image.png" alt="" width={80} height={80}/>
+          <p className='text-sm font-extralight'>24 hours Customer Service Support</p>
+        </div>
+      </div>
+
+      {/* *****************************************************SUBSCRIPTION SECTION************************************* */}
+
+      <div className='flex flex-col'>
+        <p className='text-5xl text-center font-extrabold text-[#6540DD] my-5'>Subscription Plan</p><br/>
+        <span className='text-xl text-center font-extralight'>Affordable Rates for High-Quality Services. </span>
+      </div>
+
+      <div className='grid grid-cols-3 gap-10 px-24 my-10'>
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <p className='text-lg font-extrabold text-[#6540DD] my-5'>Basic</p>
+          <ul className='flex flex-col gap-5'>
+            <li><span className='font-extralight'>5 Clothes per week</span></li>
+            <li>Monthly Subscription - <span className="text-[#6540DD] font-extrabold">10,000 Naira</span></li>
+            <li>10% off Annual Subscription</li>
+          </ul>
+          <button className='bg-[#6540DD] text-[#FFF] text-lg p-2 w-full my-10 rounded-md'>Subscribe</button>
+        </div>
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <span className='flex justify-between my-5'>
+            <p className='text-lg font-extrabold text-[#6540DD]'>Golden</p>
+            <button className='text-xs px-2 border border-1 border-gray-500 rounded-full'>RECOMMENDED</button>
+          </span>
+          <ul className='flex flex-col gap-5'>
+            <li>Monthly Subscription - <span className="text-[#6540DD] font-extrabold">18,000 Naira</span></li>
+            <li>10% off Annual Subscription</li>
+          </ul>
+          <button className='bg-[#6540DD] text-[#FFF] text-lg p-2 w-full my-10 rounded-md'>Subscribe</button>
+        </div>
+        <div className='col-span-3 md:col-span-3 lg:col-span-1 group rounded-lg border border-1 border-[#6540DD] p-10 transition-colors'>
+          <p className='text-lg font-extrabold text-[#6540DD]'>Custom</p>
+        </div>
+      </div>
+
+      {/** ****************************************************CONTACT SECTION******************************************* */}
+      <div className='flex flex-col'>
+        <p className='text-5xl text-center font-extrabold text-[#6540DD] my-5'>Contact Us</p><br/>
+        <span className='text-xl text-center font-extralight'>Affordable Rates for High-Quality Services. </span>
+      </div>
+
+      <div className='my-10'>
+      </div>
     </main>
   )
 }
