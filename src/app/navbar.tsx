@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="container px-24 h-24 flex items-center justify-between">
-      <div>
+    <div className="container px-10 lg:px-24 h-24 grid grid-cols-12 md:grid-cols-12 lg:flex items-center justify-between">
+      <div className="col-span-4">
         <Link href="/"><svg width="104" height="52" viewBox="0 0 194 52" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M33.024 47.552L0.576 47.616V41.472L15.872 28.544C22.208 23.168 24.32 20.096 24.32 15.616C24.32 10.304 21.44 7.296 16.512 7.296C11.392 7.296 8.192 10.88 8.128 16.896H0C0.0640001 6.656 6.592 0 16.512 0C26.496 0 32.704 5.696 32.704 15.168C32.704 21.696 29.12 26.624 22.016 32.704L13.568 39.936H33.024V47.552Z" fill="url(#paint0_linear_3_58)"/>
           <path d="M73.608 38.72H67.912V47.616H60.168V38.72H36.424V31.552L57.608 0.832001H67.912V31.552H73.608V38.72ZM45.128 31.552H60.168V9.664L45.128 31.552Z" fill="url(#paint1_linear_3_58)"/>
@@ -39,12 +39,12 @@ export default function Navbar() {
           </defs> 
         </svg></Link>
       </div>
-      <ul className="flex space-x-6">
+      <ul className="hidden lg:flex space-x-6">
         <li><Link href="/">Home</Link></li>
         <li><Link href="/">Contact Us</Link></li>
       </ul>
-      <div>
-        <ul className="flex space-x-6">
+      <div className="col-span-8">
+        <ul className="flex justify-end space-x-6">
           <li>
             <Link href="/auth/login">Login</Link>
           </li>

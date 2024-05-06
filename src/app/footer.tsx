@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="container bg-[#6540DD] px-24 h-56 flex items-center justify-between">
-      <div>
+    <div className="container bg-[#6540DD] px-10 lg:px-24 h-56 grid grid-cols-12 md:grid-cols-12 lg:flex items-center justify-between">
+      <div className="col-span-12">
         <Link href="/">
           <svg width="104" height="52" viewBox="0 0 194 52" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M33.024 47.552L0.576 47.616V41.472L15.872 28.544C22.208 23.168 24.32 20.096 24.32 15.616C24.32 10.304 21.44 7.296 16.512 7.296C11.392 7.296 8.192 10.88 8.128 16.896H0C0.0640001 6.656 6.592 0 16.512 0C26.496 0 32.704 5.696 32.704 15.168C32.704 21.696 29.12 26.624 22.016 32.704L13.568 39.936H33.024V47.552Z" fill="white"/>
@@ -15,12 +15,12 @@ export default function Footer() {
           </svg>
         </Link>
       </div>
-      <ul className="flex flex-col space-y-6 text-white">
+      <ul className="col-span-12 flex flex-col space-y-6 text-white">
         <li>5, Nupe Street, Kubwa, F.C.T Abuja</li>
         <li>24wash@laundry.mail</li>
         <li>+234-8137149294</li>
       </ul>
-      <div>
+      <div className="col-span-12">
         <ul className="flex flex-col space-x-6 text-white">
           <li>Find us on socials:</li>
         </ul>
